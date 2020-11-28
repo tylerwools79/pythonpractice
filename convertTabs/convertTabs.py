@@ -1,0 +1,10 @@
+def convertTabs(code, x): #a function that replaces tab characters in a line of code with the appropriate number of spaces (given by x)
+    return code.replace('\t',' '*x)
+def runTests():
+	print(convertTabs("\treturn False",4) == "    return False")
+	print(convertTabs("",8)=="")
+	print(convertTabs("    for x in range(20):",16)=="    for x in range(20):")
+	print(convertTabs("escape\n\ttest",3) == "escape\n   test")
+	print(convertTabs("\t\t\t\t",2)=="        ")
+	print(convertTabs("\tbalance\t",3)=="   balance   ")
+runTests()
