@@ -1,0 +1,16 @@
+def startupName(companies): #this takes in 3 strings and returns all characters that appear in exactly 2 of the 3 strings provided.
+    cmp1 = set(companies[0])
+    cmp2 = set(companies[1])
+    cmp3 = set(companies[2])
+    res = (((cmp1 & cmp2)|(cmp2&cmp3)|(cmp1&cmp3)) - (cmp1 & cmp2 & cmp3))
+    return sorted(list(res))
+def runTests():
+	print("Test 1:",end=' ')
+	print(startupName(["nameone","nametwo","namethree"])==["o","t"])
+	print("Test 2:",end=' ')
+	print(startupName(["heh","hah","funny"])==["h"])
+	print("Test 3:",end=' ')
+	print(startupName(["abc","def","hijk"])==[])
+	print("Test 4:",end=' ')
+	print(startupName(["abc","cab","bac"])==[])
+runTests()
