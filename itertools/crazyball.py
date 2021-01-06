@@ -1,0 +1,6 @@
+from itertools import combinations
+#function returns all possible combinations of players, where k is the number of players picked, for a lineup
+def crazyball(players, k):
+    return list(combinations(sorted(players),k))
+print('Test: ',end=' ')
+print(crazyball(['One','Two','Three','Four','Five','Six','Seven'],5))#== [('Five','Four','One','Seven','Six'), ('Five','Four','One','Seven','Three'), ('Five','Four','One','Seven','Two'), ('Five','Four','One','Six','Three'), ('Five','Four','One','Six','Two'), ('Five','Four','One','Three','Two'), ('Five','Four','Seven','Six','Three'), ('Five','Four','Seven','Six','Two'), ('Five','Four','Seven','Three','Two'), ('Five','Four','Six','Three','Two'), ('Five','One','Seven','Six','Three'), ('Five','One','Seven','Six','Two'), ('Five','One','Seven','Three','Two'), ('Five','One','Six','Three','Two'), ('Five','Seven','Six','Three','Two'), ('Four','One','Seven','Six','Three'), ('Four','One','Seven','Six','Two'), ('Four','One','Seven','Three','Two'), ('Four','One','Six','Three','Two'), ('Four','Seven','Six','Three','Two')])
